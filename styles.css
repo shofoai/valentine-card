@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffc4d6 0%, #ffb3c9 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    border-radius: 30px;
+    padding: 50px 60px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 1050px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.panda-container {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.panda-img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.heart {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    font-size: 40px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.panda-label {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.question {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 0;
+    font-weight: 600;
+    line-height: 1.4;
+    flex-shrink: 0;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    position: relative;
+    flex-shrink: 0;
+    min-width: 300px;
+}
+
+.btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.yes-btn {
+    background: #ff4d7d;
+    color: white;
+}
+
+.yes-btn:hover {
+    background: #ff2e63;
+    transform: scale(1.1);
+}
+
+.no-btn {
+    background: #e0e0e0;
+    color: #666;
+}
+
+.no-btn:hover {
+    background: #d0d0d0;
+}
+
+/* Success screen */
+.success {
+    background: white;
+    border-radius: 30px;
+    padding: 50px 60px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 600px;
+}
+
+.hidden {
+    display: none;
+}
+
+.yay-text {
+    font-size: 48px;
+    color: #ff4d7d;
+    margin-bottom: 30px;
+    animation: bounce 0.8s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.celebration-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.celebration-media {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 15px;
+    object-fit: contain;
+}
